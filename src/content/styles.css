@@ -1,0 +1,770 @@
+/* Katch! content overlays — Signal Desk */
+
+#katch-floating-badge,
+#katch-toast,
+#katch-badge-menu,
+#katch-mock-chip {
+  all: initial;
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif !important;
+  box-sizing: border-box !important;
+  z-index: 2147483646 !important;
+}
+
+#katch-floating-badge {
+  position: fixed !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 6px !important;
+  background: #1a1d21 !important;
+  border: 1px solid #e5a23a !important;
+  color: #e5a23a !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: background 0.12s ease !important;
+  pointer-events: auto !important;
+}
+
+#katch-floating-badge:hover {
+  background: #24282e !important;
+}
+
+#katch-badge-menu {
+  position: fixed !important;
+  min-width: 240px !important;
+  max-width: 300px !important;
+  max-height: 340px !important;
+  overflow-y: auto !important;
+  padding: 6px !important;
+  border-radius: 6px !important;
+  background: #1a1d21 !important;
+  border: 1px solid #2a2f36 !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45) !important;
+  color: #e8eaed !important;
+  pointer-events: auto !important;
+}
+
+#katch-badge-menu .katch-menu-title {
+  display: block !important;
+  font-size: 10px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #8b929a !important;
+  padding: 6px 8px 4px !important;
+  font-weight: 500 !important;
+}
+
+#katch-badge-menu .katch-menu-item {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  padding: 7px 8px !important;
+  margin: 1px 0 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  background: transparent !important;
+  color: #e8eaed !important;
+  font-size: 12px !important;
+  cursor: pointer !important;
+  font-family: inherit !important;
+}
+
+#katch-badge-menu .katch-menu-item:hover {
+  background: rgba(229, 162, 58, 0.12) !important;
+  color: #e5a23a !important;
+}
+
+#katch-badge-menu .katch-menu-item span {
+  display: block !important;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  font-size: 10px !important;
+  color: #8b929a !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-top: 2px !important;
+}
+
+#katch-toast {
+  position: fixed !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  min-width: 280px !important;
+  max-width: 340px !important;
+  padding: 12px 14px !important;
+  border-radius: 6px !important;
+  background: #1a1d21 !important;
+  border: 1px solid #2a2f36 !important;
+  border-left: 3px solid #e5a23a !important;
+  color: #e8eaed !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4) !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  animation: katch-toast-in 0.2s ease-out !important;
+}
+
+#katch-toast .katch-toast-title {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #e5a23a !important;
+}
+
+#katch-toast .katch-toast-body {
+  font-size: 12px !important;
+  color: #8b929a !important;
+  line-height: 1.45 !important;
+}
+
+#katch-toast .katch-toast-action {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: #e8eaed !important;
+  margin-top: 2px !important;
+}
+
+#katch-mock-chip {
+  position: fixed !important;
+  top: 12px !important;
+  right: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  background: #1a1d21 !important;
+  border: 1px solid #e5a23a !important;
+  color: #e5a23a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  pointer-events: auto !important;
+  cursor: default !important;
+}
+
+#katch-mock-chip button {
+  all: unset !important;
+  cursor: pointer !important;
+  color: #8b929a !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  padding: 0 2px !important;
+}
+
+#katch-mock-chip button:hover {
+  color: #e8eaed !important;
+}
+
+#katch-badge-menu .katch-menu-sep {
+  height: 1px !important;
+  margin: 6px 4px !important;
+  background: #2a2f36 !important;
+}
+
+#katch-badge-menu .katch-menu-action {
+  color: #e5a23a !important;
+}
+
+#katch-auto-chip {
+  position: fixed !important;
+  top: 12px !important;
+  left: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  background: #1a1d21 !important;
+  border: 1px solid #e5a23a !important;
+  color: #e5a23a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  pointer-events: auto !important;
+  z-index: 2147483646 !important;
+}
+
+#katch-auto-chip button {
+  all: unset !important;
+  cursor: pointer !important;
+  color: #e8eaed !important;
+  font-size: 11px !important;
+  border: 1px solid #2a2f36 !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+}
+
+#katch-auto-chip button:hover {
+  border-color: #e5a23a !important;
+}
+
+#katch-log-panel {
+  position: fixed !important;
+  left: 12px !important;
+  bottom: 12px !important;
+  width: min(420px, calc(100vw - 24px)) !important;
+  height: 220px !important;
+  display: none !important;
+  flex-direction: column !important;
+  background: #111315 !important;
+  border: 1px solid #2a2f36 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45) !important;
+  z-index: 2147483646 !important;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  color: #e8eaed !important;
+  overflow: hidden !important;
+  pointer-events: auto !important;
+}
+
+#katch-log-panel[data-open='1'] {
+  display: flex !important;
+}
+
+#katch-log-panel .katch-log-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  padding: 6px 8px !important;
+  border-bottom: 1px solid #2a2f36 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #e5a23a !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+}
+
+#katch-log-panel .katch-log-actions {
+  display: flex !important;
+  gap: 4px !important;
+}
+
+#katch-log-panel .katch-log-actions button {
+  all: unset !important;
+  cursor: pointer !important;
+  color: #8b929a !important;
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+  border: 1px solid #2a2f36 !important;
+  border-radius: 4px !important;
+  font-family: inherit !important;
+}
+
+#katch-log-panel .katch-log-actions button:hover {
+  color: #e8eaed !important;
+  border-color: #e5a23a !important;
+}
+
+#katch-log-panel .katch-log-list {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: 4px 6px !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+#katch-log-panel .katch-log-row {
+  display: grid !important;
+  grid-template-columns: 54px 40px 48px 1fr !important;
+  gap: 6px !important;
+  padding: 2px 0 !important;
+  border-bottom: 1px solid rgba(42, 47, 54, 0.5) !important;
+}
+
+#katch-log-panel .katch-log-time {
+  color: #5c6570 !important;
+}
+
+#katch-log-panel .katch-log-level {
+  text-transform: uppercase !important;
+  font-size: 9px !important;
+}
+
+#katch-log-panel .katch-log-scope {
+  color: #e5a23a !important;
+}
+
+#katch-log-panel .katch-log-msg {
+  color: #c5cad0 !important;
+  word-break: break-word !important;
+}
+
+#katch-teach-banner {
+  position: fixed !important;
+  top: 56px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 2147483647 !important;
+  min-width: 280px !important;
+  max-width: min(420px, calc(100vw - 24px)) !important;
+  padding: 12px 14px !important;
+  border-radius: 6px !important;
+  background: #1a1d21 !important;
+  border: 1px solid #e5a23a !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5) !important;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif !important;
+  color: #e8eaed !important;
+  pointer-events: auto !important;
+  animation: katch-toast-in 0.2s ease-out !important;
+}
+
+#katch-teach-banner .katch-teach-title {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #e5a23a !important;
+  margin-bottom: 4px !important;
+}
+
+#katch-teach-banner .katch-teach-body {
+  font-size: 12px !important;
+  color: #e8eaed !important;
+  line-height: 1.4 !important;
+}
+
+#katch-teach-banner .katch-teach-hint {
+  font-size: 11px !important;
+  color: #8b929a !important;
+  margin-top: 6px !important;
+}
+
+#katch-teach-banner .katch-teach-skip {
+  all: unset !important;
+  display: inline-block !important;
+  margin-top: 10px !important;
+  cursor: pointer !important;
+  font-size: 11px !important;
+  color: #8b929a !important;
+  border: 1px solid #2a2f36 !important;
+  padding: 3px 10px !important;
+  border-radius: 4px !important;
+  font-family: inherit !important;
+}
+
+#katch-teach-banner .katch-teach-skip:hover {
+  color: #e8eaed !important;
+  border-color: #e5a23a !important;
+}
+
+#katch-run-summary,
+#katch-run-detail {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif !important;
+  color: #e8eaed !important;
+  pointer-events: auto !important;
+  box-sizing: border-box !important;
+  animation: katch-toast-in 0.22s ease-out !important;
+}
+
+#katch-run-summary {
+  right: 16px !important;
+  bottom: 16px !important;
+  width: min(380px, calc(100vw - 24px)) !important;
+  max-height: min(560px, calc(100vh - 32px)) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: linear-gradient(165deg, #1a1d21 0%, #14171a 100%) !important;
+  border: 1px solid #2a2f36 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55) !important;
+  overflow: hidden !important;
+}
+
+#katch-run-summary .katch-rs-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 14px 14px 10px !important;
+  border-bottom: 1px solid #2a2f36 !important;
+}
+
+#katch-run-summary .katch-rs-brand {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  color: #e8eaed !important;
+  margin-bottom: 4px !important;
+}
+
+#katch-run-summary .katch-rs-brand span {
+  color: #e5a23a !important;
+}
+
+#katch-run-summary .katch-rs-title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #e8eaed !important;
+}
+
+#katch-run-summary .katch-rs-sub {
+  margin-top: 3px !important;
+  font-size: 12px !important;
+  color: #8b929a !important;
+  line-height: 1.4 !important;
+}
+
+#katch-run-summary .katch-rs-close,
+#katch-run-detail .katch-rd-close {
+  all: unset !important;
+  cursor: pointer !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 6px !important;
+  color: #8b929a !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+}
+
+#katch-run-summary .katch-rs-close:hover,
+#katch-run-detail .katch-rd-close:hover {
+  color: #e8eaed !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+#katch-run-summary .katch-rs-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+  padding: 12px 14px !important;
+}
+
+#katch-run-summary .katch-rs-stat {
+  padding: 10px 8px !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid #2a2f36 !important;
+  text-align: center !important;
+}
+
+#katch-run-summary .katch-rs-stat.clear {
+  border-color: rgba(107, 207, 142, 0.35) !important;
+  background: rgba(107, 207, 142, 0.08) !important;
+}
+
+#katch-run-summary .katch-rs-stat.hot {
+  border-color: rgba(229, 162, 58, 0.4) !important;
+  background: rgba(229, 162, 58, 0.1) !important;
+}
+
+#katch-run-summary .katch-rs-stat-val {
+  display: block !important;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #e8eaed !important;
+}
+
+#katch-run-summary .katch-rs-stat-val small {
+  font-size: 12px !important;
+  color: #8b929a !important;
+  font-weight: 500 !important;
+}
+
+#katch-run-summary .katch-rs-stat.clear .katch-rs-stat-val {
+  color: #6bcf8e !important;
+}
+
+#katch-run-summary .katch-rs-stat.hot .katch-rs-stat-val {
+  color: #e5a23a !important;
+}
+
+#katch-run-summary .katch-rs-stat-lbl {
+  display: block !important;
+  margin-top: 4px !important;
+  font-size: 10px !important;
+  color: #8b929a !important;
+  letter-spacing: 0.02em !important;
+}
+
+#katch-run-summary .katch-rs-section {
+  flex: 1 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+  padding: 0 14px 4px !important;
+}
+
+#katch-run-summary .katch-rs-section-title {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #8b929a !important;
+  margin-bottom: 8px !important;
+}
+
+#katch-run-summary .katch-rs-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-y: auto !important;
+  max-height: 240px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+#katch-run-summary .katch-rs-item {
+  margin: 0 !important;
+  padding: 10px 10px 8px !important;
+  border-radius: 8px !important;
+  border: 1px solid #2a2f36 !important;
+  background: #111315 !important;
+  cursor: pointer !important;
+  transition: border-color 0.12s ease, background 0.12s ease !important;
+}
+
+#katch-run-summary .katch-rs-item:hover {
+  border-color: rgba(229, 162, 58, 0.45) !important;
+  background: rgba(229, 162, 58, 0.06) !important;
+}
+
+#katch-run-summary .katch-rs-item-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+#katch-run-summary .katch-rs-kind {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  color: #e5a23a !important;
+  text-transform: uppercase !important;
+}
+
+#katch-run-summary .katch-rs-time {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  font-size: 10px !important;
+  color: #5c6570 !important;
+}
+
+#katch-run-summary .katch-rs-item-msg {
+  font-size: 12px !important;
+  color: #e8eaed !important;
+  line-height: 1.4 !important;
+}
+
+#katch-run-summary .katch-rs-item-hint {
+  margin-top: 6px !important;
+  font-size: 10px !important;
+  color: #8b929a !important;
+}
+
+#katch-run-summary .katch-rs-empty {
+  padding: 16px 12px !important;
+  border-radius: 8px !important;
+  border: 1px dashed #2a2f36 !important;
+  font-size: 12px !important;
+  color: #8b929a !important;
+  line-height: 1.45 !important;
+  text-align: center !important;
+}
+
+#katch-run-summary .katch-rs-foot {
+  display: flex !important;
+  gap: 8px !important;
+  padding: 12px 14px 14px !important;
+  border-top: 1px solid #2a2f36 !important;
+}
+
+#katch-run-summary .katch-rs-btn,
+#katch-run-detail .katch-rd-btn {
+  all: unset !important;
+  box-sizing: border-box !important;
+  flex: 1 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  padding: 8px 10px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  border: 1px solid #2a2f36 !important;
+  color: #e8eaed !important;
+}
+
+#katch-run-summary .katch-rs-btn.primary,
+#katch-run-detail .katch-rd-btn:not(.ghost) {
+  border-color: rgba(229, 162, 58, 0.45) !important;
+  background: rgba(229, 162, 58, 0.14) !important;
+  color: #e5a23a !important;
+}
+
+#katch-run-summary .katch-rs-btn:hover,
+#katch-run-detail .katch-rd-btn:hover {
+  border-color: #e5a23a !important;
+}
+
+#katch-run-detail {
+  right: 16px !important;
+  bottom: 16px !important;
+  width: min(400px, calc(100vw - 24px)) !important;
+  max-height: min(560px, calc(100vh - 32px)) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: #1a1d21 !important;
+  border: 1px solid #2a2f36 !important;
+  border-left: 3px solid #e5a23a !important;
+  border-radius: 10px !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55) !important;
+  overflow: hidden !important;
+}
+
+#katch-run-detail .katch-rd-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 14px !important;
+  border-bottom: 1px solid #2a2f36 !important;
+}
+
+#katch-run-detail .katch-rd-eyebrow {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  font-size: 10px !important;
+  color: #e5a23a !important;
+  text-transform: uppercase !important;
+  margin-bottom: 2px !important;
+}
+
+#katch-run-detail .katch-rd-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+#katch-run-detail .katch-rd-body {
+  padding: 12px 14px !important;
+  overflow-y: auto !important;
+  flex: 1 !important;
+  min-height: 0 !important;
+}
+
+#katch-run-detail .katch-rd-msg {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  color: #e8eaed !important;
+  margin-bottom: 10px !important;
+}
+
+#katch-run-detail .katch-rd-pre {
+  margin: 0 0 12px !important;
+  padding: 10px !important;
+  border-radius: 6px !important;
+  background: #111315 !important;
+  border: 1px solid #2a2f36 !important;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  font-size: 10px !important;
+  color: #c5cad0 !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  max-height: 160px !important;
+  overflow: auto !important;
+}
+
+#katch-run-detail .katch-rd-shot-wrap {
+  margin-bottom: 12px !important;
+}
+
+#katch-run-detail .katch-rd-shot {
+  display: block !important;
+  width: 100% !important;
+  max-height: 180px !important;
+  object-fit: cover !important;
+  object-position: top !important;
+  border-radius: 6px !important;
+  border: 1px solid #2a2f36 !important;
+  cursor: zoom-in !important;
+  margin-bottom: 8px !important;
+}
+
+#katch-run-detail .katch-rd-shot-actions {
+  display: flex !important;
+  gap: 8px !important;
+}
+
+#katch-shot-lightbox {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483646 !important;
+  background: rgba(0, 0, 0, 0.88) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+}
+
+#katch-shot-lightbox img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 8px !important;
+  border: 1px solid #2a2f36 !important;
+}
+
+#katch-shot-lightbox .katch-sl-close {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  border: 1px solid #2a2f36 !important;
+  background: #1a1d21 !important;
+  color: #e8eaed !important;
+  font-size: 22px !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+}
+
+#katch-run-detail .katch-rd-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  font-size: 11px !important;
+  color: #c5cad0 !important;
+}
+
+#katch-run-detail .katch-rd-meta span {
+  display: block !important;
+  font-size: 10px !important;
+  color: #8b929a !important;
+  margin-bottom: 2px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+#katch-run-detail .katch-rd-meta code {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+  font-size: 11px !important;
+  color: #e5a23a !important;
+  word-break: break-all !important;
+}
+
+#katch-run-detail .katch-rd-foot {
+  display: flex !important;
+  gap: 8px !important;
+  padding: 12px 14px 14px !important;
+  border-top: 1px solid #2a2f36 !important;
+}
+
+@keyframes katch-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

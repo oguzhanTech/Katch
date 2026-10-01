@@ -1,0 +1,26 @@
+import type { PayloadItem } from '../types'
+
+export const BOUNDARY_PAYLOADS: PayloadItem[] = [
+  { id: 'bnd-1', category: 'boundary', featured: true, label: 'Negative one', value: '-1' },
+  { id: 'bnd-2', category: 'boundary', featured: true, label: 'Zero', value: '0' },
+  { id: 'bnd-3', category: 'boundary', featured: true, label: 'MAX_INT 32', value: '2147483647' },
+  { id: 'bnd-4', category: 'boundary', featured: true, label: 'MAX_INT+1', value: '2147483648' },
+  { id: 'bnd-5', category: 'boundary', featured: true, label: 'MIN_INT 32', value: '-2147483648' },
+  { id: 'bnd-6', category: 'boundary', featured: true, label: 'Float', value: '0.1' },
+  { id: 'bnd-7', category: 'boundary', featured: true, label: 'Large float', value: '1.7976931348623157e+308' },
+  { id: 'bnd-8', category: 'boundary', featured: true, label: 'Empty', value: '' },
+  { id: 'bnd-9', category: 'boundary', label: 'NaN', value: 'NaN' },
+  { id: 'bnd-10', category: 'boundary', label: 'Infinity', value: 'Infinity' },
+  { id: 'bnd-11', category: 'boundary', label: '-Infinity', value: '-Infinity' },
+  { id: 'bnd-12', category: 'boundary', label: 'MAX_SAFE', value: '9007199254740991' },
+  { id: 'bnd-13', category: 'boundary', label: 'MAX_SAFE+1', value: '9007199254740992' },
+  { id: 'bnd-14', category: 'boundary', label: 'Uint32 max', value: '4294967295' },
+  { id: 'bnd-15', category: 'boundary', label: 'Scientific', value: '1e10' },
+  { id: 'bnd-16', category: 'boundary', label: 'Hex int', value: '0xFFFFFFFF' },
+  { id: 'bnd-17', category: 'boundary', label: 'Octal-like', value: '0123' },
+  { id: 'bnd-18', category: 'boundary', label: 'Leading zeros', value: '00001' },
+  { id: 'bnd-19', category: 'boundary', label: 'Plus sign', value: '+42' },
+  { id: 'bnd-20', category: 'boundary', label: 'Comma decimal', value: '1,5' },
+  { id: 'bnd-21', category: 'boundary', featured: true, label: 'BigInt-ish', value: '99999999999999999999' },
+  { id: 'bnd-22', category: 'boundary', featured: true, label: 'Neg zero', value: '-0' },
+]

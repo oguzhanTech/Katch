@@ -1,0 +1,26 @@
+import type { PayloadItem } from '../types'
+
+export const SPECIAL_PAYLOADS: PayloadItem[] = [
+  { id: 'spc-1', category: 'specialChars', featured: true, label: 'Quotes mix', value: `"'\\\`` },
+  { id: 'spc-2', category: 'specialChars', featured: true, label: 'Angle brackets', value: '<>&"' },
+  { id: 'spc-3', category: 'specialChars', featured: true, label: 'Semicolon pipe', value: ';|&' },
+  { id: 'spc-4', category: 'specialChars', featured: true, label: 'Percent', value: '%00%0a%0d%s%d' },
+  { id: 'spc-5', category: 'specialChars', featured: true, label: 'Backslash', value: 'C:\\Windows\\System32' },
+  { id: 'spc-6', category: 'specialChars', featured: true, label: 'Shell meta', value: '$(whoami)`id`' },
+  { id: 'spc-7', category: 'specialChars', featured: true, label: 'Format %n', value: '%n%n%n%n%s%s%s%s' },
+  { id: 'spc-8', category: 'specialChars', featured: true, label: 'Curly braces', value: '{{7*7}}#{7*7}' },
+  { id: 'spc-9', category: 'specialChars', label: 'Brackets', value: '[]{}()' },
+  { id: 'spc-10', category: 'specialChars', label: 'Dollar', value: '${7*7}' },
+  { id: 'spc-11', category: 'specialChars', label: 'At hash', value: '@#$%^*' },
+  { id: 'spc-12', category: 'specialChars', label: 'Tilde bang', value: '~!`' },
+  { id: 'spc-13', category: 'specialChars', label: 'Colon slash', value: '://' },
+  { id: 'spc-14', category: 'specialChars', label: 'CSV break', value: '=1+1,+cmd|"/c calc"!A0' },
+  { id: 'spc-15', category: 'specialChars', label: 'XML entities', value: '&lt;&gt;&amp;&quot;&apos;' },
+  { id: 'spc-16', category: 'specialChars', label: 'SQL wildcards', value: '%_' },
+  { id: 'spc-17', category: 'specialChars', label: 'Regex special', value: '.*+?^${}()|[]\\' },
+  { id: 'spc-18', category: 'specialChars', label: 'Null char', value: '\0' },
+  { id: 'spc-19', category: 'specialChars', label: 'Bell char', value: '\x07' },
+  { id: 'spc-20', category: 'specialChars', label: 'All printable special', value: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~' },
+  { id: 'spc-21', category: 'specialChars', featured: true, label: 'Template SSTI', value: '{{constructor.constructor("return this")()}}' },
+  { id: 'spc-22', category: 'specialChars', featured: true, label: 'LDAP meta', value: '*)(uid=*))(|(uid=*' },
+]

